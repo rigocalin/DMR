@@ -2,18 +2,18 @@
 Enabled=1
 Address=2262.master.brandmeister.network
 Port=62031
-TGRewrite=2,9,2,9,1
-TypeRewrite1=1,9990,1,9990
-TypeRewrite2=2,9990,2,9990
-SrcRewrite=2,4000,2,9,1001
-PassAllPC1=1
-PassAllPC2=2
-PassAllTG1=1
-PassAllTG2=2
-Password="your BM password"
-Debug=1
+TGRewrite0=2,9,2,9,1
+PCRewrite0=2,94000,2,4000,1001
+TypeRewrite0=2,9990,2,9990
+SrcRewrite0=2,4000,2,9,1001
+PassAllPC0=1
+PassAllTG0=1
+PassAllPC1=2
+PassAllTG1=2
+Password="your password"
+Debug=0
+Id=yourid
 Name=BM_2262_Romania
-Id=your DMR ID here
 Location=1
 
 [DMR Network 2]
@@ -21,69 +21,20 @@ Enabled=1
 Address=5.2.179.146
 Port=55555
 TGRewrite0=2,8,2,9,1
-TGRewrite1=2,80505,2,505,1
-TGRewrite2=2,80800,2,800,100
-TGRewrite3=2,83801,2,3801,8
-TGRewrite4=2,89990,2,9990,1
-TGRewrite5=2,80001,1,1,9999
-TGRewrite6=2,80001,2,1,9999
-PCRewrite0=2,84000,2,8009,1
+TGRewrite1=1,2226,1,226,1
+TGRewrite2=2,22262,2,2262,1
+TGRewrite3=2,222603,2,22603,1
+TGRewrite4=2,29990,2,9990,1
+
+PCRewrite0=2,24000,2,4000,1001
 Password="PASSWORD"
-Debug=1
-Id=your DMR ID here
-Name=DMR+_IPSC2-Ro-Prefix8
-Options=”RelinkTIme=60;TS1_1=235;TS1_2=208;TS2_1=860;TS2_2=2085;”
-Location=1
+Debug=0
+Id=yourid
+Name=DMR+_IPSC2-Romania
+Location=0
+Options="UserLink=1;TS1_1=226;TS1_2=1;TS1_3=2;TS1_4=112;TS2_1=2262"
 
 [DMR Network 3]
-Enabled=1
-Name=FreeDMR_Ro-Prefix4
-Address=freedmr.dstar-yo.ro
-Port=62031
-#Options=# See this link if you wish to use DMR Options : Static Talk Groups
-PCRewrite1=1,4009990,1,9990,1
-PCRewrite2=2,4009990,2,9990,1
-TypeRewrite1=1,4009990,1,9990
-TypeRewrite2=2,4009990,2,9990
-TGRewrite1=1,4000001,1,1,999999
-TGRewrite2=2,4000001,2,1,999999
-SrcRewrite1=1,9990,1,4009990,1
-SrcRewrite2=2,9990,2,4009990,1
-SrcRewrite3=1,1,1,4000001,999999
-SrcRewrite4=2,1,2,4000001,999999
-Password=passw0rd
-Location=1
-Debug=1
-Id=your DMR ID here
-
-[Info]
-Latitude=45.719284
-Longitude=21.21554
-Location=Timisoara
-Description=RO
-URL=https://www.qrz.com/db/YO2RIG
-RXFrequency=430000000
-TXFrequency=430000000
-Enabled=0
-Power=1
-Height=0
-
-[XLX Network]
-Enabled=0
-File=/usr/local/etc/XLXHosts.txt
-Port=62030
-Password=passw0rd
-ReloadTime=60
-Slot=2
-TG=6
-Base=64000
-Startup=ROU
-Relink=60
-Debug=0
-Id=your DMR ID here
-UserControl=1
-
-[DMR Network 4]
 Enabled=0
 Name=HBLink
 Address=1.2.3.4
@@ -93,6 +44,25 @@ Password=PASSWORD
 Location=0
 Debug=0
 TGRewrite0=2,11,2,11,1
+
+[DMR Network 4]
+Enabled=1
+Address=freedmr.dstar-yo.ro
+Port=62031
+TGRewrite0=2,39,2,9,1
+TGRewrite1=1,3226,1,226,1
+TGRewrite2=2,32262,2,2262,1
+TGRewrite3=2,322603,2,22603,1
+TGRewrite4=2,39990,2,9990,1
+
+PCRewrite0=2,34000,2,4000,1001
+Password=passw0rd
+Debug=0
+Id=yourid
+Name=FreeDMR-Romania
+Location=0
+Options="TS1=226,112;TS2=2262,22603;DIAL=0;VOICE=0;SINGLE=1;TIMER=5"
+
 
 [GPSD]
 Enable=0
@@ -109,4 +79,3 @@ Suffix=DMR
 [Dynamic TG Control]
 Enabled=1
 Port=3769
-
